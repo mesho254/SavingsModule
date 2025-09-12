@@ -185,7 +185,7 @@ Shows totals, funnel bar chart (drop-offs visible), line chart for trends, table
 ### Pending Withdrawals
 Shows pending withdrawals with approve/reject buttons.
 
-![Pending Withdrawals Screenshot](screenshots/pendingWIthdrawals.png)
+![Pending Withdrawals Screenshot](screenshots/pendingWIthdrawal.png)
 
 ### Registration Form
 Simple form for user registration.

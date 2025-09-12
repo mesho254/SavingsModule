@@ -1,14 +1,3 @@
-### Updated README with Sample Dataset
-
-I've updated the README below to include the missing "Sample dataset with events (CSV/DB)." section. Since the prototype uses MongoDB as the database, I've provided:
-
-- **DB Seed Script**: An expanded JavaScript seed function for direct insertion into MongoDB (via the backend's `index.js` or a separate seeder).
-- **CSV Export**: A sample CSV file content representing the events (transactions and related data). This can be imported into MongoDB using tools like `mongoimport` or a Node.js script, or used directly for testing in CSV-based tools. The CSV includes columns for event type, user details, timestamps, amounts, etc., simulating 10 registrations, 7 goals, 5 deposits, and 2 withdrawals as mentioned.
-
-You can copy-paste the seed script into your backend for quick population. For CSV, save it as `sample-events.csv` and import as needed.
-
----
-
 # Savings Module Prototype
 
 ## Overview

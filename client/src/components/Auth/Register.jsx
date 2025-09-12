@@ -56,6 +56,7 @@ const Register = () => {
         <option value="parent">Parent</option>
       </select>
       <button type="submit" style={buttonStyle}>Register</button>
+      <p>Already have an account? <a href="/login">Login</a></p>
     </form>
   );
 };

@@ -55,10 +55,15 @@ Shows totals, funnel bar chart (drop-offs visible), line chart for trends, table
 
 ![Dashboard Screenshot](screenshots/dashboard.png)
 
+### Pending Withdrawals
+Shows pending withdrawals with approve/reject buttons.
+
+![Pending Withdrawals Screenshot](screenshots/pendingWIthdrawals.png)
+
 ### Registration Form
 Simple form for user registration.
 
-![Registration Screenshot](screenshots/registration.png)
+![Registration Screenshot](screenshots/Register1.png)
 
 ### Login Form
 Simple form for user login.
@@ -68,7 +73,7 @@ Simple form for user login.
 ### Goal Creation Form
 Form for creating a savings goal.
 
-![Goal Creation Screenshot](screenshots/goal-creation.png)
+![Goal Creation Screenshot](screenshots/createGoal.png)
 
 ### Deposit Form
 Form for making a deposit.
@@ -78,7 +83,7 @@ Form for making a deposit.
 ### Withdrawal Form
 Form for requesting a withdrawal, including pending withdrawals table with modal confirmation.
 
-![Withdrawal Screenshot](screenshots/withdrawal.png)
+![Withdrawal Screenshot](screenshots/withdraw.png)
 
 ### Ledger Table
 Table showing transaction history.

@@ -13,7 +13,7 @@ const GoalCreate = () => {
 
   const fetchGoals = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/goals');
+      const res = await axios.get('https://savings-module.vercel.app/api/goals');
       setGoals(res.data);
     } catch (error) {
       alert(error.response.data.message);
@@ -27,7 +27,7 @@ const GoalCreate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/goals', formData);
+      await axios.post('https://savings-module.vercel.app/api/goals', formData);
       alert('Goal created');
       navigate('/deposit');
     } catch (error) {

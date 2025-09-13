@@ -15,7 +15,7 @@ const AdminTransactions = () => {
 
   const fetchPendingWithdrawals = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/transactions/withdrawals/pending', {
+      const response = await axios.get('https://savings-module.vercel.app/api/transactions/withdrawals/pending', {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       setPendingWithdrawals(response.data);
@@ -26,7 +26,7 @@ const AdminTransactions = () => {
 
   const fetchReconciliationData = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/reconciliation/check', {
+      const response = await axios.get('https://savings-module.vercel.app/api/reconciliation/check', {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       setReconciliationData(response.data);
@@ -54,7 +54,7 @@ const AdminTransactions = () => {
   const handleConfirmAction = async (transaction, action) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/transactions/withdrawal/${transaction._id}`,
+        `https://savings-module.vercel.app/api/transactions/withdrawal/${transaction._id}`,
         {
           action,
           reason: reason || undefined,

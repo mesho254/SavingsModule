@@ -33,7 +33,7 @@ const Ledger = () => {
         if (isAdmin && activeTab === 'all') {
           url = '/api/transactions/ledger/all';
         }
-        const res = await axios.get(`http://localhost:5000${url}`);
+        const res = await axios.get(`https://savings-module.vercel.app${url}`);
         setLedger(res.data);
       } catch (error) {
         alert(error.response?.data?.message || error.message); 

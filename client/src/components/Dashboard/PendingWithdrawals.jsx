@@ -15,7 +15,7 @@ const PendingWithdrawals = () => {
   useEffect(() => {
     const fetchPending = async () => {
       try {
-        const url = `http://localhost:5000/api/admin/pending${filter === 'mine' ? `?userId=${user._id}` : ''}`;
+        const url = `https://savings-module.vercel.app/api/admin/pending${filter === 'mine' ? `?userId=${user._id}` : ''}`;
         const res = await axios.get(url);
         setPendingWithdrawals(res.data);
       } catch (error) {
@@ -38,7 +38,7 @@ const PendingWithdrawals = () => {
   const handleConfirm = async () => {
     try {
       const endpoint = modalAction === 'approve' ? '/approve' : '/reject';
-      await axios.post(`http://localhost:5000/api/admin${endpoint}`, { transactionId: selectedId });
+      await axios.post(`https://savings-module.vercel.app/api/admin${endpoint}`, { transactionId: selectedId });
       setPendingWithdrawals(pendingWithdrawals.filter(p => p._id !== selectedId));
       setShowModal(false);
     } catch (error) {

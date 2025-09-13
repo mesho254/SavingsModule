@@ -9,7 +9,7 @@ const Deposit = () => {
 
   const fetchGoals = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/goals');
+      const res = await axios.get('https://savings-module.vercel.app/api/goals');
       setGoals(res.data);
     } catch (error) {
       alert(error.response.data.message);
@@ -23,7 +23,7 @@ const Deposit = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/transactions/deposit', formData);
+      await axios.post('https://savings-module.vercel.app/api/transactions/deposit', formData);
       alert('Deposit processed');
       navigate('/ledger');
     } catch (error) {

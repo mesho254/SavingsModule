@@ -9,7 +9,7 @@ const Withdrawal = () => {
 
   const fetchGoals = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/goals');
+      const res = await axios.get('https://savings-module.vercel.app/api/goals');
       setGoals(res.data);
     } catch (error) {
       alert(error.response.data.message);
@@ -33,7 +33,7 @@ const Withdrawal = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:5000/api/transactions/withdrawal', { ...formData, amount });
+      await axios.post('https://savings-module.vercel.app/api/transactions/withdrawal', { ...formData, amount });
       alert('Withdrawal requested');
       navigate('/ledger');
     } catch (error) {

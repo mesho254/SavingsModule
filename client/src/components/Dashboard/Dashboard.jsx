@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchAnalytics = async () => {  
       try {
-        const url = `http://localhost:5000/api/analytics${filter === 'mine' ? `?userId=${user._id}` : ''}`;
+        const url = `https://savings-module.vercel.app/api/analytics${filter === 'mine' ? `?userId=${user._id}` : ''}`;
         const res = await axios.get(url);
         setAnalytics(res.data);
       } catch (error) {

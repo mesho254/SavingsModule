@@ -5,6 +5,7 @@ import FunnelChart from './FunnelChart';
 import TrendChart from './TrendChart';
 import TopSavers from './TopSavers';
 import NudgeList from './NudgeList';
+import AdminTransactions from './AdminTransactions';
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
@@ -12,7 +13,7 @@ const Dashboard = () => {
   const [filter, setFilter] = useState(user?.role === 'admin' ? 'all' : 'mine');
 
   useEffect(() => {
-    const fetchAnalytics = async () => {
+    const fetchAnalytics = async () => {  
       try {
         const url = `http://localhost:5000/api/analytics${filter === 'mine' ? `?userId=${user._id}` : ''}`;
         const res = await axios.get(url);
@@ -65,6 +66,12 @@ const Dashboard = () => {
         <p>Avg Frequency: {analytics.avgFrequency}</p>
         <p>Withdrawal Ratio: {analytics.withdrawalRatio?.toFixed(2)}</p>
       </div>
+      
+      {user?.role === 'admin' && (
+        <div style={{ ...cardStyle, gridColumn: '1 / -1' }}>
+          <AdminTransactions />
+        </div>
+      )}
     </div>
   );
 };

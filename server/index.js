@@ -11,6 +11,7 @@ const goalRoutes = require('./routes/goals');
 const transactionRoutes = require('./routes/transactions');
 const analyticsRoutes = require('./routes/analytics');
 const adminRoutes = require('./routes/admin');
+const reconciliationRoutes = require('./routes/reconciliation');
 
 const app = express();
 connectDB();
@@ -49,6 +50,7 @@ app.use('/api/goals', goalRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/reconciliation', reconciliationRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}. Swagger docs at http://localhost:${PORT}/api-docs`));

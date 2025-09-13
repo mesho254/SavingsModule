@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const transactionSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   goalId: { type: mongoose.Schema.Types.ObjectId, ref: 'Goal' },
+  idempotencyKey: { type: String, unique: true, sparse: true }, // For preventing duplicate transactions
   type: { type: String, enum: ['deposit', 'withdrawal'], required: true },
   amount: { type: Number, required: true },
   status: { type: String, enum: ['success', 'failed', 'pending', 'approved', 'rejected'], default: 'success' }, // for deposits: success/failed (mock random fail), withdrawals: pending/approved/rejected

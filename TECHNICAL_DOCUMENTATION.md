@@ -150,3 +150,44 @@ Common issues and solutions:
    - Verify user role assignments
    - Check token expiration
    - Review middleware logs
+
+## Competitive Analysis: Chumz vs Nissmart Savings
+
+### Feature Comparison Table
+
+| Feature Category | Chumz | Nissmart |
+|-----------------|-------|-----------|
+| **User Experience** | ✓ Simple 3-step onboarding<br>✓ Mobile-first design<br>✓ Direct mobile money integration<br>✓ Clean interface | ✓ Advanced features with maintained simplicity<br>✓ Flexible goal customization<br>✓ Detailed transaction insights<br>✓ Multiple visualization options |
+| **Goal Management** | ✓ Predefined templates<br>✓ Basic progress tracking<br>✓ Fixed saving rules<br>× Limited customization | ✓ Custom goal creation<br>✓ Advanced progress analytics<br>✓ Flexible saving rules<br>✓ Predictive goal tracking |
+| **Analytics** | × Basic reporting<br>× Limited insights<br>× Minimal predictions<br>× Fixed reports | ✓ Real-time analytics<br>✓ Predictive analysis<br>✓ Customizable reporting<br>✓ Behavioral insights |
+| **Administration** | × Basic admin panel<br>× Limited controls<br>× Simple reconciliation<br>× Basic transaction view | ✓ Multi-tier admin controls<br>✓ Advanced monitoring<br>✓ Sophisticated reconciliation<br>✓ Detailed audit trails |
+| **Security** | ✓ Standard security<br>✓ Regulatory compliance<br>× Basic transaction validation<br>× Limited fraud detection | ✓ Idempotency handling<br>✓ Advanced fraud detection<br>✓ Automated reconciliation<br>✓ Comprehensive validation |
+| **Social Features** | ✓ Group savings<br>✓ Savings challenges<br>✓ Community engagement<br>✓ User testimonials | ○ Planned for future<br>○ Focus on enterprise features<br>○ Team collaboration tools<br>○ Administrative groups |
+| **Market Position** | ✓ 150,000+ users<br>✓ Consumer focus<br>✓ Mobile money integration<br>✓ CMA compliance | ✓ Enterprise-ready<br>✓ Advanced features<br>✓ Scalable architecture<br>✓ Data-driven approach |
+
+Legend:
+- ✓ Available feature
+- × Missing/Limited feature
+- ○ Planned/In development
+
+### Key Differentiators for Nissmart
+
+1. **Enterprise Focus**
+   - Scalable infrastructure for large organizations
+   - Comprehensive administrative controls
+   - Detailed compliance reporting
+   - Advanced security features
+
+2. **Technical Advantages**
+   - Real-time data processing
+   - Advanced analytics engine
+   - Robust reconciliation system
+   - Comprehensive audit trails
+
+3. **Strategic Value**
+   - Data-driven decision making
+   - Predictive analytics
+   - Flexible customization
+   - Enterprise-grade reliability
+
+Through this comparison, Nissmart positions itself as the enterprise-ready savings platform, offering advanced features while maintaining user-friendly aspects. The focus on analytics, administration, and data integrity creates a distinct value proposition for organizations needing sophisticated savings management capabilities.

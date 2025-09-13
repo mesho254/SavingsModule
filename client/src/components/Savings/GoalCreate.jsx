@@ -59,28 +59,28 @@ const GoalCreate = () => {
   };
   const inputStyle = {
     padding: '10px',
-    border: '1px solid #ddd',
+    border: '1px solid #E0E0E0',
     borderRadius: '4px',
     width: '100%',
     boxSizing: 'border-box',
   };
   const buttonStyle = {
     padding: '10px',
-    background: '#28a745',
+    background: '#20B2AA',
     color: 'white',
     border: 'none',
     borderRadius: '4px',
     cursor: 'pointer',
   };
 
-  const formContainerStyle = { maxWidth: '500px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px', margin: '20px auto' };
-  const tableContainerStyle = { width: '100%', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' };
+  const formContainerStyle = { maxWidth: '500px', padding: '20px', border: '1px solid #E0E0E0', borderRadius: '8px', margin: '20px auto' };
+  const tableContainerStyle = { width: '100%', padding: '20px', border: '1px solid #E0E0E0', borderRadius: '8px' };
   const tableStyle = { width: '100%', borderCollapse: 'collapse' };
-  const thStyle = { border: '1px solid #ddd', padding: '8px', backgroundColor: '#f2f2f2', textAlign: 'left' };
-  const tdStyle = { border: '1px solid #ddd', padding: '8px' };
+  const thStyle = { border: '1px solid #E0E0E0', padding: '8px', backgroundColor: '#F5F5F5', textAlign: 'left' };
+  const tdStyle = { border: '1px solid #E0E0E0', padding: '8px' };
   const paginationStyle = { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '20px' };
-  const pageButtonStyle = { padding: '5px 10px', margin: '0 5px', background: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' };
-  const selectStyle = { padding: '5px', border: '1px solid #ddd', borderRadius: '4px' };
+  const pageButtonStyle = { padding: '5px 10px', margin: '0 5px', background: '#20B2AA', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' };
+  const selectStyle = { padding: '5px', border: '1px solid #E0E0E0', borderRadius: '4px' };
 
   return (
     <div style={containerStyle}>
@@ -110,7 +110,7 @@ const GoalCreate = () => {
         {user.goals && (
           <button
             onClick={() => navigate('/ledger')}
-            style={{ ...buttonStyle, background: '#6c757d', marginTop: '10px' }}
+            style={{ ...buttonStyle, background: '#FF7F50', marginTop: '10px' }}
           >
             View Ledger
           </button>

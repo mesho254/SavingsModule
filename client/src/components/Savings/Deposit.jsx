@@ -35,11 +35,11 @@ const Deposit = () => {
     setFormData({ ...formData, goalId: e.target.value });
   };
 
-  const containerStyle = { maxWidth: '500px', margin: '20px auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' };
+  const containerStyle = { maxWidth: '500px', margin: '20px auto', padding: '20px', border: '1px solid #E0E0E0', borderRadius: '8px' };
   const formStyle = { display: 'grid', gap: '10px' };
   const inputStyle = {
     padding: '10px',
-    border: '1px solid #ddd',
+    border: '1px solid #E0E0E0',
     borderRadius: '4px',
     width: '100%',
     boxSizing: 'border-box',
@@ -50,7 +50,7 @@ const Deposit = () => {
   };
   const buttonStyle = {
     padding: '10px',
-    background: '#28a745',
+    background: '#20B2AA',
     color: 'white',
     border: 'none',
     borderRadius: '4px',

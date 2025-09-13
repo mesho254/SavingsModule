@@ -8,23 +8,24 @@ import Deposit from './components/Savings/Deposit';
 import Withdrawal from './components/Savings/Withdrawal';
 import Ledger from './components/Savings/Ledger';
 import Dashboard from './components/Dashboard/Dashboard';
-import PendingWithdrawals from './components/Dashboard/PendingWithdrawals'; // Add this import (create the file)
-import { FaHome, FaMoneyCheckAlt, FaSignOutAlt, FaChartBar, FaBullseye, FaPlusCircle, FaMinusCircle, FaReceipt, FaChartPie } from 'react-icons/fa';
+import PendingWithdrawals from './components/Dashboard/PendingWithdrawals'; 
+import { FaMoneyCheckAlt, FaSignOutAlt, FaChartBar, FaBullseye, FaPlusCircle, FaMinusCircle, FaReceipt, FaChartPie } from 'react-icons/fa';
+import Logo from './assets/logo.JPG';
 
 const App = () => {
   const { user, loading, logout } = useContext(AuthContext);
   if (loading) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', fontSize: '18px' }}>Loading...</div>;
 
-  const navStyle = { display: 'flex', background: '#f0f0f0', padding: '10px', justifyContent: 'space-around' };
-  const linkStyle = { textDecoration: 'none', color: 'blue', padding: '5px 10px' };
+  const navStyle = { display: 'flex', background: '#F5F5F5', padding: '10px', justifyContent: 'space-around' };
+  const linkStyle = { textDecoration: 'none', color: '#20B2AA', padding: '5px 10px' };
   const topLinkStyle = ({ isActive }) => ({
     ...linkStyle,
-    color: isActive ? 'darkblue' : 'blue',
+    color: isActive ? '#191970' : '#20B2AA',
     fontWeight: isActive ? 'bold' : 'normal'
   });
   const sidebarStyle = {
     width: '220px',
-    background: '#2c3e50',
+    background: '#191970',
     color: 'white',
     padding: '20px',
     height: '100vh',
@@ -42,7 +43,7 @@ const App = () => {
     transition: 'background 0.3s',
   };
   const sidebarLinkHover = {
-    background: '#34495e',
+    background: '#FF7F50',
   };
   const sidebarNavStyle = ({ isActive }) => ({
     ...sidebarLinkStyle,
@@ -52,7 +53,7 @@ const App = () => {
     display: 'flex',
     alignItems: 'center',
     gap: '10px',
-    background: '#e74c3c',
+    background: '#DC143C',
     color: 'white',
     border: 'none',
     padding: '10px',
@@ -113,7 +114,7 @@ const App = () => {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
             {user && 
           <Link to="/" style={linkStyle}>
-            <FaHome /> Home
+            <img src={Logo} alt="NISS Smart" style={{ height: '40px', width: 'auto' }} />
           </Link> 
           }
           <h1>Savings Module</h1>
@@ -138,7 +139,7 @@ const App = () => {
             {user.role === 'admin' && <NavLink to="/dashboard" style={topLinkStyle}>
               <FaChartPie /> Analytics
             </NavLink>}
-            <button onClick={logout} style={{ background: 'red', color: 'white', border: 'none', padding: '5px 10px', cursor: 'pointer' }}>Logout</button>
+            <button onClick={logout} style={{ background: '#DC143C', color: 'white', border: 'none', padding: '5px 10px', cursor: 'pointer' }}>Logout</button>
           </nav>}
           <Routes>
             <Route path="/register" element={!user ? <Register /> : <Navigate to="/goals" />} />

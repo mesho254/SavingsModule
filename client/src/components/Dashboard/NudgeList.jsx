@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NudgeList = ({ data }) => {
-  const cardStyle = { border: '1px solid #ccc', padding: '15px', borderRadius: '8px', background: 'white' };
+  const cardStyle = { border: '1px solid #E0E0E0', padding: '15px', borderRadius: '8px', background: 'white' };
   const tableStyle = {
     width: '100%',
     borderCollapse: 'collapse',
@@ -10,8 +10,8 @@ const NudgeList = ({ data }) => {
     display: 'block',
     whiteSpace: 'nowrap',
   };
-  const thStyle = { border: '1px solid #ddd', padding: '8px', background: '#f2f2f2' };
-  const tdStyle = { border: '1px solid #ddd', padding: '8px' };
+  const thStyle = { border: '1px solid #E0E0E0', padding: '8px', background: '#F5F5F5' };
+  const tdStyle = { border: '1px solid #E0E0E0', padding: '8px' };
 
   return (
     <div style={cardStyle}>

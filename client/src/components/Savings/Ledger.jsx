@@ -136,7 +136,7 @@ const Ledger = () => {
     doc.save(`ledger-${activeTab}.pdf`);
   };
 
-  const containerStyle = { border: '1px solid #ccc', padding: '15px', borderRadius: '8px', background: 'white', width: '100%', margin: '20px 0' };
+  const containerStyle = { border: '1px solid #E0E0E0', padding: '15px', borderRadius: '8px', background: 'white', width: '100%', margin: '20px 0' };
   const tableWrapperStyle = {
     overflowX: 'auto',
     marginTop: '10px',
@@ -148,20 +148,20 @@ const Ledger = () => {
     borderCollapse: 'collapse',
     whiteSpace: 'nowrap',
   };
-  const thStyle = { border: '1px solid #ddd', padding: '8px', background: '#f2f2f2', textAlign: 'left', whiteSpace: 'nowrap' };
-  const tdStyle = { border: '1px solid #ddd', padding: '8px', whiteSpace: 'nowrap' };
+  const thStyle = { border: '1px solid #E0E0E0', padding: '8px', background: '#F5F5F5', textAlign: 'left', whiteSpace: 'nowrap' };
+  const tdStyle = { border: '1px solid #E0E0E0', padding: '8px', whiteSpace: 'nowrap' };
   const paginationStyle = { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px' };
-  const paginationButtonStyle = { padding: '5px 10px', margin: '0 5px', border: '1px solid #ddd', borderRadius: '4px', cursor: 'pointer', background: 'white' };
+  const paginationButtonStyle = { padding: '5px 10px', margin: '0 5px', border: '1px solid #E0E0E0', borderRadius: '4px', cursor: 'pointer', background: 'white' };
   const disabledButtonStyle = { ...paginationButtonStyle, cursor: 'not-allowed', opacity: 0.5 };
-  const selectStyle = { padding: '5px', border: '1px solid #ddd', borderRadius: '4px' };
+  const selectStyle = { padding: '5px', border: '1px solid #E0E0E0', borderRadius: '4px' };
   const filterStyle = { marginBottom: '10px', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '10px' };
   const downloadStyle = { marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' };
   const tabStyle = { display: 'flex', gap: '10px', marginBottom: '10px', justifyContent: 'center' };
   const tabButtonStyle = (active) => ({
     padding: '10px 20px',
-    border: '1px solid #ddd',
-    background: active ? '#007bff' : 'white',
-    color: active ? 'white' : 'black',
+    border: '1px solid #E0E0E0',
+    background: active ? '#20B2AA' : 'white',
+    color: active ? 'white' : '#191970',
     cursor: 'pointer',
     borderRadius: '4px',
   });

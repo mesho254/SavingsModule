@@ -8,7 +8,7 @@ const FunnelChart = ({ data }) => {
     { stage: 'First Deposit', value: data?.firstDeposits || 0 },
   ];
 
-  const cardStyle = { border: '1px solid #ccc', padding: '15px', borderRadius: '8px', background: 'white' };
+  const cardStyle = { border: '1px solid #E0E0E0', padding: '15px', borderRadius: '8px', background: 'white' };
 
   return (
     <div style={cardStyle}>
@@ -19,7 +19,7 @@ const FunnelChart = ({ data }) => {
             <XAxis dataKey="stage" />
             <YAxis />
             <Tooltip />
-            <Bar dataKey="value" fill="#8884d8" />
+            <Bar dataKey="value" fill="#20B2AA" />
           </BarChart>
         </ResponsiveContainer>
       </div>

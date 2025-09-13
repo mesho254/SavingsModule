@@ -37,6 +37,7 @@
   margin-bottom: 24px;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #E0E0E0;
 }
 
 .table-container {
@@ -44,6 +45,7 @@
   background: white;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #E0E0E0;
 }
 
 .table {
@@ -55,16 +57,16 @@
 .table td {
   padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 .table th {
-  background-color: #f9fafb;
+  background-color: #F5F5F5;
   font-weight: 600;
 }
 
 .table tr:hover {
-  background-color: #f9fafb;
+  background-color: #FAFAFA;
 }
 
 .button {
@@ -77,22 +79,22 @@
 }
 
 .button-primary {
-  background-color: #3b82f6;
+  background-color: #20B2AA;
   color: white;
   margin-right: 8px;
 }
 
 .button-primary:hover {
-  background-color: #2563eb;
+  background-color: #0F9D58;
 }
 
 .button-error {
-  background-color: #ef4444;
+  background-color: #DC143C;
   color: white;
 }
 
 .button-error:hover {
-  background-color: #dc2626;
+  background-color: #B22222;
 }
 
 .modal {
@@ -113,6 +115,7 @@
   border-radius: 8px;
   width: 100%;
   max-width: 500px;
+  border: 1px solid #E0E0E0;
 }
 
 .modal-header {
@@ -132,7 +135,7 @@
 .input {
   width: 100%;
   padding: 8px 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #E0E0E0;
   border-radius: 4px;
   margin-top: 8px;
   font-size: 14px;
@@ -140,6 +143,6 @@
 
 .input:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  border-color: #20B2AA;
+  box-shadow: 0 0 0 2px rgba(32, 178, 170, 0.2);
 }

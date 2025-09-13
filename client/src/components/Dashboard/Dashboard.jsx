@@ -26,10 +26,10 @@ const Dashboard = () => {
   }, [filter, user?._id]);
 
   const dashboardStyle = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', padding: '20px' };
-  const cardStyle = { border: '1px solid #ccc', padding: '15px', borderRadius: '8px', background: 'white' };
+  const cardStyle = { border: '1px solid #E0E0E0', padding: '15px', borderRadius: '8px', background: 'white' };
   const filterStyle = { display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '20px' };
-  const buttonStyle = { padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer', background: '#007bff', color: 'white' };
-  const activeButtonStyle = { ...buttonStyle, background: '#0056b3' };
+  const buttonStyle = { padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer', background: '#20B2AA', color: 'white' };
+  const activeButtonStyle = { ...buttonStyle, background: '#0F9D58' };
 
   return (
     <div style={dashboardStyle}>

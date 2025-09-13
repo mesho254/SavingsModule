@@ -23,7 +23,7 @@ const Login = () => {
     maxWidth: '400px',
     margin: '50px auto',
     padding: '20px',
-    border: '1px solid #ccc',
+    border: '1px solid #E0E0E0',
     borderRadius: '8px',
     boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
     display: 'grid',
@@ -31,14 +31,14 @@ const Login = () => {
   };
   const inputStyle = {
     padding: '10px',
-    border: '1px solid #ddd',
+    border: '1px solid #E0E0E0',
     borderRadius: '4px',
     width: '100%',
     boxSizing: 'border-box',
   };
   const buttonStyle = {
     padding: '10px',
-    background: '#007bff',
+    background: '#20B2AA',
     color: 'white',
     border: 'none',
     borderRadius: '4px',

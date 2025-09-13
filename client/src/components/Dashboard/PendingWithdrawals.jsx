@@ -52,10 +52,10 @@ const PendingWithdrawals = () => {
   const currentWithdrawals = pendingWithdrawals.slice(indexOfFirst, indexOfLast);
   const totalPages = Math.ceil(pendingWithdrawals.length / rowsPerPage);
 
-  const cardStyle = { border: '1px solid #ccc', padding: '15px', borderRadius: '8px', background: 'white', width: '100%', margin: '20px 0' };
+  const cardStyle = { border: '1px solid #E0E0E0', padding: '15px', borderRadius: '8px', background: 'white', width: '100%', margin: '20px 0' };
   const buttonStyle = { padding: '5px 10px', margin: '0 5px', border: 'none', borderRadius: '4px', cursor: 'pointer' };
-  const approveBtn = { ...buttonStyle, background: '#28a745', color: 'white' };
-  const rejectBtn = { ...buttonStyle, background: '#dc3545', color: 'white' };
+  const approveBtn = { ...buttonStyle, background: '#32CD32', color: 'white' };
+  const rejectBtn = { ...buttonStyle, background: '#DC143C', color: 'white' };
   const tableWrapperStyle = {
     overflowX: 'auto',
     marginTop: '10px',
@@ -65,15 +65,15 @@ const PendingWithdrawals = () => {
     borderCollapse: 'collapse',
     whiteSpace: 'nowrap',
   };
-  const thStyle = { border: '1px solid #ddd', padding: '8px', background: '#f2f2f2' };
-  const tdStyle = { border: '1px solid #ddd', padding: '8px' };
+  const thStyle = { border: '1px solid #E0E0E0', padding: '8px', background: '#F5F5F5' };
+  const tdStyle = { border: '1px solid #E0E0E0', padding: '8px' };
   const filterStyle = { display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '20px' };
-  const filterButtonStyle = { padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer', background: '#007bff', color: 'white' };
-  const activeFilterButtonStyle = { ...filterButtonStyle, background: '#0056b3' };
+  const filterButtonStyle = { padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer', background: '#20B2AA', color: 'white' };
+  const activeFilterButtonStyle = { ...filterButtonStyle, background: '#0F9D58' };
   const paginationStyle = { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px' };
-  const paginationButtonStyle = { padding: '5px 10px', margin: '0 5px', border: '1px solid #ddd', borderRadius: '4px', cursor: 'pointer', background: 'white' };
+  const paginationButtonStyle = { padding: '5px 10px', margin: '0 5px', border: '1px solid #E0E0E0', borderRadius: '4px', cursor: 'pointer', background: 'white' };
   const disabledButtonStyle = { ...paginationButtonStyle, cursor: 'not-allowed', opacity: 0.5 };
-  const selectStyle = { padding: '5px', border: '1px solid #ddd', borderRadius: '4px' };
+  const selectStyle = { padding: '5px', border: '1px solid #E0E0E0', borderRadius: '4px' };
   const modalStyle = {
     position: 'fixed',
     top: '50%',
@@ -81,7 +81,7 @@ const PendingWithdrawals = () => {
     transform: 'translate(-50%, -50%)',
     background: 'white',
     padding: '20px',
-    border: '1px solid #ccc',
+    border: '1px solid #E0E0E0',
     borderRadius: '8px',
     zIndex: 1000,
     textAlign: 'center'
@@ -179,8 +179,8 @@ const PendingWithdrawals = () => {
           <div style={overlayStyle} onClick={() => setShowModal(false)} />
           <div style={modalStyle}>
             <p>Are you sure you want to {modalAction} this withdrawal?</p>
-            <button onClick={handleConfirm} style={{ ...modalButtonStyle, background: '#28a745', color: 'white' }}>Yes</button>
-            <button onClick={() => setShowModal(false)} style={{ ...modalButtonStyle, background: '#dc3545', color: 'white' }}>No</button>
+            <button onClick={handleConfirm} style={{ ...modalButtonStyle, background: '#32CD32', color: 'white' }}>Yes</button>
+            <button onClick={() => setShowModal(false)} style={{ ...modalButtonStyle, background: '#DC143C', color: 'white' }}>No</button>
           </div>
         </>
       )}

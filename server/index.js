@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const corsOptions = { origin: "*", credentials: true, optionSuccessStatus: 200 };
@@ -36,7 +36,7 @@ mongooseOptions,err=>{
 
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 // Swagger configuration
 const swaggerOptions = {

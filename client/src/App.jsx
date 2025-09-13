@@ -112,11 +112,10 @@ const App = () => {
         )}
         <div style={{ flex: 1, ...mainStyle }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-            {user && 
           <Link to="/" style={linkStyle}>
             <img src={Logo} alt="NISS Smart" style={{ height: '40px', width: 'auto' }} />
           </Link> 
-          }
+
           <h1>Savings Module</h1>
           {user && 
             <h2>Welcome, {user ? user.name : ''}</h2>

@@ -13,6 +13,26 @@ const AdminTransactions = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
+  const StatusTag = ({ status }) => {
+    const isHealthy = status === 'healthy';
+    return (
+      <span
+        style={{
+          display: 'inline-block',
+          padding: '0 7px',
+          borderRadius: '6px',
+          backgroundColor: isHealthy ? '#52c41a' : '#f5222d',
+          color: 'white',
+          fontSize: '12px',
+          lineHeight: '20px',
+          fontWeight: '500',
+        }}
+      >
+        {status}
+      </span>
+    );
+  };
+
   const fetchPendingWithdrawals = useCallback(async () => {
     try {
       const response = await axios.get('https://savings-module.vercel.app/api/transactions/withdrawals/pending', {
@@ -82,13 +102,15 @@ const AdminTransactions = () => {
       {reconciliationData && (
         <div className="health-check">
           <h3>System Health Check</h3>
-          <p>Status: {reconciliationData.status}</p>
-          {reconciliationData.balanceDiscrepancies.length > 0 && (
+          <p>Status: <StatusTag status={reconciliationData.status} /></p>
+
+          <h4>Balance Discrepancies</h4>
+          {reconciliationData.balanceDiscrepancies.length > 0 ? (
             <>
               <div className="alert alert-warning">
                 Found {reconciliationData.balanceDiscrepancies.length} balance discrepancies
               </div>
-              <h4>Balance Discrepancies Details:</h4>
+              <h5>Details:</h5>
               <ul>
                 {reconciliationData.balanceDiscrepancies.map((disc, index) => (
                   <li key={index}>
@@ -98,16 +120,26 @@ const AdminTransactions = () => {
                 ))}
               </ul>
             </>
+          ) : (
+            <p>Balance Discrepancies: 0</p>
           )}
-          {reconciliationData.potentialDuplicates.length > 0 && (
+
+          <h4>Potential Duplicates</h4>
+          {reconciliationData.potentialDuplicates.length > 0 ? (
             <div className="alert alert-warning">
               Found {reconciliationData.potentialDuplicates.length} potential duplicate transactions
             </div>
+          ) : (
+            <p>Potential Duplicates: 0</p>
           )}
-          {reconciliationData.integrityViolations && reconciliationData.integrityViolations.length > 0 && (
+
+          <h4>Integrity Violations</h4>
+          {reconciliationData.integrityViolations && reconciliationData.integrityViolations.length > 0 ? (
             <div className="alert alert-warning">
               Found {reconciliationData.integrityViolations.length} integrity violations
             </div>
+          ) : (
+            <p>Integrity Violations: 0</p>
           )}
         </div>
       )}
